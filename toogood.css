@@ -59,6 +59,9 @@ body {
 #logo {
     height: 100%;
 }
+#logo svg{
+    color : white;
+}
 
 #nav-part-2 {
     margin-top: 1.5vh;
@@ -69,7 +72,8 @@ body {
 }
 
 #nav-part-2 a {
-    color: black;
+    /* color: yellow; */
+    color: white;
     font-weight: 400;
     font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
@@ -86,7 +90,8 @@ body {
     padding: 12px 10px 10px 10px;
     position: relative;
     /* background-color: bisque; */
-    background-color: #F7F7F7;
+    background-color: transparent;
+    /* background-color: #F7F7F7; */
     border-radius: 18px;
 }
 
@@ -105,14 +110,119 @@ body {
 
     #logo svg {
         height: 10vh;
-        margin-left:1.5vw;
+        margin-left: 1.5vw;
+    }
+
+    #navbar-icons{
+        margin-right: 1.5vw;
     }
 }
 
 #menu{
-    position: absolute;
+    position: fixed;
     width: 100%;
-    
+    min-height: 100vh;
     z-index: 90;
     background-color: black;
+    overflow: hidden;
 }
+#menu-content{
+    margin-top: 15vh;
+    height: 83vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#menu-links{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: black;
+    height: 100%;
+    width: 30%;
+    padding: 0vw 1.5vw;
+}
+.menulinks h2{
+    line-height: 56px;
+    font-family: "Exo 2";
+    text-transform: uppercase;
+    text-transform: bold;
+    font-size: 60px;
+    font-weight: 700;
+    color: white;
+}
+
+#elem{
+    background-color: black;
+    height: 100%;
+    width: 70%;
+    display: flex;
+    align-items: flex-end;
+}
+
+#elem404{
+    height:30vh;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1vw 1vw 0vw 2vw;
+}
+.elem{
+    height: 100%;
+    width: 15vw;
+    background-color: black;
+    color: white;
+    font-family: Montserrat;
+    font-size: 1vw;
+}
+.elem h4{
+    line-height: 3vh;
+    font-weight: 400;
+}
+.headings{
+    text-transform: uppercase;
+    color: grey;
+    margin-bottom: 5vh ;
+    font-size: 0.9vw;
+}
+
+@media (max-width:1024px){
+    .menulinks h2{
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    #menu-content{
+        padding: 0px 0px;
+        justify-content: end;
+    }
+
+    #menu-links{
+        width: 300px;
+        height: ;
+    }
+    #elem404{
+        padding: 0px 5vw;
+        position: absolute;
+        height: 23vh;
+        bottom: 0;
+        width: 100%;
+        /* display: none; */
+        margin-bottom: 6vh;
+    }
+
+    .headings{
+        font-size: 10px;
+        margin-bottom: 12px;
+    }
+    .elem h4{
+        width: 100px;
+        line-height: 3vh;
+        font-weight: 400;
+        font-size: 12px;
+    }
+}
+
