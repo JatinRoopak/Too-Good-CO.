@@ -15,102 +15,74 @@ tl.from("#title h1 ", {
     stagger: 0.2,
 },"-=0.3");
 
-function openingmenu(){
+function menuanimation(){
     document.querySelector("#navbar-icons a").addEventListener("click", function(event) {
         event.preventDefault();
-    });
-    document.getElementById("menuicon").addEventListener("click",function(){
-        
-        console.log("i am clicked")
-        var menu = document.querySelector("#menu")
-        var logo = document.querySelector("#logo svg")
-        gsap.to(menu,{
-            height:"100vh"
-        })
-        gsap.to(logo,{
-            color:"white"
-        })
-    
-        var navlinks = document.querySelectorAll("#nav-part-2 a")
-        navlinks.forEach(navlinks=>{
-            gsap.to(navlinks,{
-                color:"white"
-            })
-        })
     })
-}
-
-
-document.querySelector("#navbar-icons a").addEventListener("click", function(event) {
-    event.preventDefault();
-})
-let ismenuclose = true
-document.getElementById("menuicon").addEventListener("click",function() {
-    var menu = document.querySelector("#menu")
-    var links = document.querySelectorAll("#nav-part-2 a")
-    var logo = document.querySelector("#logo svg")
-
-    var menulinks = document.querySelectorAll(".menulinks h2")
-    var elem = document.querySelector("#elem404")
+    let ismenuclose = true
+    document.getElementById("menuicon").addEventListener("click",function() {
+        var menu = document.querySelector("#menu")
+        var links = document.querySelectorAll("#nav-part-2 a")
+        var logo = document.querySelector("#logo svg")
     
-    if (ismenuclose == false){
-        var tback = gsap.timeline()
-
-        tback.to(elem,{
-            opacity:0,
-            duration:0.3
-        })
-
-        tback.to(menu,{
-            height:"0vh",
-            duration: 0.3
-        });
-
-        tback.to(links,{
-            color:"black"
-        },'-=0.3');
-
-        tback.to(logo,{
-            color:"black"
-        },'-=0.3');
-
+        var menulinks = document.querySelectorAll(".menulinks h2")
+        var elem = document.querySelector("#elem404")
         
-        // links.forEach(link=>{
-        //     gsap.to(link,{
-        //         color:"black",
-        //     })
-        // });
-        
-        ismenuclose = true
-    }
-
-    else{
-        gsap.to(menu,{
-            height:"100vh",
-            duration: 0.4
-        });
-        gsap.to(logo,{
-            color:"white"
-        });
-
-        links.forEach(link=>{
-            gsap.to(link,{
-                color:"white"
+        if (ismenuclose == false){
+            var tback = gsap.timeline()
+    
+            tback.to(elem,{
+                opacity:0,
+                duration:0.3
             })
-        });
+    
+            tback.to(menu,{
+                height:"0vh",
+                duration: 0.3
+            });
+    
+            tback.to(links,{
+                color:"black"
+            },'-=0.3');
+    
+            tback.to(logo,{
+                color:"black"
+            },'-=0.3');
+    
+            ismenuclose = true
+        }
+    
+        else{
+            gsap.to(menu,{
+                height:"100vh",
+                duration: 0.4
+            });
+            gsap.to(logo,{
+                color:"white"
+            });
+    
+            links.forEach(link=>{
+                gsap.to(link,{
+                    color:"white"
+                })
+            });
+    
+            var tl = gsap.timeline()
+            tl.from(menulinks, {
+                y: "350px",
+                ease: "power2.out",
+                duration: 0.55
+            });
+            tl.to(elem,{
+                opacity:"1",
+                duration:0.4
+            })
+    
+            ismenuclose = false
+        }
+    });
+}
+menuanimation()
 
-        var tl = gsap.timeline()
-        tl.from(menulinks, {
-            y: "350px",
-            ease: "power2.out",
-            duration: 0.55
-        });
-        tl.to(elem,{
-            opacity:"1",
-            duration:0.4
-        })
 
-        ismenuclose = false
-    }
-})
 
