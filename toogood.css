@@ -60,7 +60,7 @@ body {
     height: 100%;
 }
 #logo svg{
-    color : white;
+    color : black;
 }
 
 #nav-part-2 {
@@ -73,7 +73,7 @@ body {
 
 #nav-part-2 a {
     /* color: yellow; */
-    color: white;
+    color: black;
     font-weight: 400;
     font-size: 1vw;
     font-family: Arial, Helvetica, sans-serif;
@@ -121,7 +121,7 @@ body {
 #menu{
     position: fixed;
     width: 100%;
-    min-height: 100vh;
+    height: 0vh;
     z-index: 90;
     background-color: black;
     overflow: hidden;
@@ -152,6 +152,9 @@ body {
     font-weight: 700;
     color: white;
 }
+.menulinks{
+    overflow: hidden;
+}
 
 #elem{
     background-color: black;
@@ -162,6 +165,7 @@ body {
 }
 
 #elem404{
+    opacity: 0;
     height:30vh;
     width: 100%;
     background-color: black;
@@ -202,7 +206,6 @@ body {
 
     #menu-links{
         width: 300px;
-        height: ;
     }
     #elem404{
         padding: 0px 5vw;
