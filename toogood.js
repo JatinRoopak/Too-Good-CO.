@@ -56,12 +56,16 @@ function landingtitle() {
         duration: 0.48,
         stagger: 0.2,
     }, "-=0.3");
+    tl.to("#page1 img", {
+        opacity: "1",
+        scale: "1"
+    });
 }
 landingtitle()
 
-function navbarAnimations(){
+function navbarAnimations() {
 
-    function scrolltriggers(){
+    function scrolltriggers() {
         gsap.to("#nav-part-2 .links", {
             opacity: 0,
             scrollTrigger: {
@@ -85,42 +89,42 @@ function navbarAnimations(){
             var links = document.querySelectorAll("#nav-part-2 a")
             var logo = document.querySelector("#logo svg")
             var backgroundicons = document.querySelector('#navbar-icons')
-    
+
             var menulinks = document.querySelectorAll(".menulinks h2")
             var elem = document.querySelector("#elem404")
-    
+
             if (ismenuclose == false) {
                 gsap.to(backgroundicons, {
                     background: "#F7F7F7"
                 })
                 var tback = gsap.timeline()
-    
+
                 tback.to(elem, {
                     opacity: 0,
                     duration: 0.3
                 })
-    
+
                 tback.to(menu, {
                     height: "0vh",
                     duration: 0.3
                 });
-    
+
                 tback.to(links, {
                     color: "black"
                 }, '-=0.3');
-    
+
                 tback.to(logo, {
                     color: "black"
                 }, '-=0.3');
-    
+
                 ismenuclose = true
             }
-    
+
             else {
                 gsap.to(backgroundicons, {
                     background: "transparent"
                 })
-    
+
                 gsap.to(menu, {
                     height: "100vh",
                     duration: 0.4
@@ -128,13 +132,13 @@ function navbarAnimations(){
                 gsap.to(logo, {
                     color: "white"
                 });
-    
+
                 links.forEach(link => {
                     gsap.to(link, {
                         color: "white"
                     })
                 });
-    
+
                 var tl = gsap.timeline()
                 tl.from(menulinks, {
                     y: "350px",
@@ -145,7 +149,7 @@ function navbarAnimations(){
                     opacity: "1",
                     duration: 0.4
                 })
-    
+
                 ismenuclose = false
             }
         });
@@ -155,3 +159,4 @@ function navbarAnimations(){
 
 }
 navbarAnimations()
+
