@@ -9,6 +9,9 @@
     background-color: black;
 }
 
+#main{
+    background-color: #F7F7F7;
+}
 html,
 body {
     height: 100%;
@@ -312,26 +315,28 @@ body {
 
 #page2 {
     width: 100%;
-    background-color: #F7F7F7;
+    /* background-color: #F7F7F7; */
     padding: 0px 2vw;
 }
 
 #page2parent {
     min-height: 100vh;
-    background-color: #F7F7F7;
+    /* background-color: white; */
 }
 
 #headers {
-    /* background-color: red; */
+    background-color: #F7F7F7;
     display: flex;
     align-items: center;
     justify-content: space-between;
     font-family: Montserrat;
     font-size: 13px;
     border-bottom: 1px solid black;
+    margin-bottom: 5px;
 }
 
 .headers {
+    background-color: #F7F7F7;
     color: black;
     font-family: Montserrat;
     font-size: 13px;
@@ -342,7 +347,7 @@ body {
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    background-color: #F7F7F7;
+    /* background-color: #F7F7F7; */
     padding: 10px 0px 0px 0px;
 }
 
@@ -353,6 +358,7 @@ body {
     position: relative;
     height: 100svh;
     width: 32%;
+   
     background-color: #F7F7F7;
     overflow: hidden;
 }
@@ -371,8 +377,7 @@ body {
     height: 60px;
     width: 80%;
     border-radius: 30px;
-    background-color: white;
-    /* background-color: #F5DFCF; */
+    /* background-color: #F7F7F7; */
     transition: height 0.3s ease;
 }
 
@@ -385,11 +390,11 @@ body {
 }
 
 #buyingkinds .elem #shop3 {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
 }
 
 #buyingkinds .elem .shop:hover {
-    height: 280px;
+    height: 40svh;
 }
 
 #headerofshop {
@@ -465,7 +470,7 @@ body {
     color: black;
 }
 
-@media(max-width:800px) {
+@media(max-width:900px) {
 
     #buyingkinds {
         flex-direction: column;
@@ -481,7 +486,34 @@ body {
 }
 
 #page3 {
-    height: 100svh;
+    background-color: #F7F7F7;
+    margin-top: 60px;
+    padding: 0px 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    background-color: beige;
+}
+
+#headlinediv{
+    width: 60%;
+}
+#headlinediv p{
+    font-size: 4.5vw;
+    font-family: "Futura-bold";
+    line-height: 4.5vw;
+}
+#paradiv{
+    width: 30%;
+}
+#paradiv p{
+    font-family: Montserrat;
+    font-size: 16.2px;
+    font-weight: 500;
+}
+#paradiv div{
+    margin-bottom: 80px;
+}
+#page4{
+    height: 100vh;
 }
