@@ -56,7 +56,6 @@ body {
 #page1 img {
     scale: 1.3;
     opacity: 0;
-    z-index: -10;
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -555,17 +554,17 @@ body {
 }
 
 #page4 {
-    width: 100%;
-    min-height: 50svh;
     position: relative;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-
 }
 
 #page4 .child {
+    position: relative;
+    z-index: 50;
     height: 40svw;
     width: 45svw;
     display: flex;
@@ -577,7 +576,6 @@ body {
 #page4 .child img {
     margin-bottom: 10%;
     height: 70%;
-
 }
 
 #page4 .child .itemtag {
@@ -612,4 +610,16 @@ body {
 #page5 {
     width: 100%;
     height: 100svh;
+}
+
+#circle{
+    pointer-events: none;
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    background-color: rgba(190, 190, 190, 0.171);
+    position: absolute;
+    transform: translate(-50%,-50%) scale(0);
+    opacity: 0;
+    z-index: 10;
 }

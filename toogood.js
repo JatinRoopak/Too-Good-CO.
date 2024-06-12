@@ -52,7 +52,7 @@ function landingtitle() {
         duration: 0.5,
     }, "-=0.2")
     tl.from("#title h1 ", {
-        y: 350,
+        y: 500,
         duration: 0.48,
         stagger: 0.2,
     }, "-=0.3");
@@ -156,7 +156,30 @@ function navbarAnimations() {
     }
     menuanimation()
 
-
 }
 navbarAnimations()
 
+document.addEventListener("mousemove", function (dets) {
+    gsap.to("#circle", {
+        x: dets.x,
+        y: dets.y,
+    });
+});
+
+var child = document.querySelectorAll("#page4 .child")
+var circle = document.querySelector("#circle")
+child.forEach(child => {
+    child.addEventListener("mouseenter", function () {
+        gsap.to(circle, {
+            opacity: 1,
+            scale: 1,
+        });
+    });
+
+    child.addEventListener("mouseleave", function () {
+        gsap.to(circle, {
+            opacity: 0,
+            scale: 0,
+        });
+    });
+});
